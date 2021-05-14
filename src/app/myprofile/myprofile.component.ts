@@ -60,8 +60,8 @@ export class MyprofileComponent implements OnInit {
     // console.log(id)
   }
 
-  UpdateProfile(id: string) {
-    this.MyProfileService.UpdateMyProfile(id).then((data) => {
+  UpdateProfile() {
+    this.MyProfileService.UpdateMyProfile(this.SelectedProfile).then((data) => {
       if (data.StatusCode === 200) {
         console.log(data.Body)
       }
