@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { GenderModel } from 'src/model/gender.model';
 import { MyProfileModel } from 'src/model/my-profile.model'
 import { MyProfileService } from 'src/services/my-profile.service';
 
@@ -13,11 +14,16 @@ export class MyprofileComponent implements OnInit {
 
   fName: string
   lName: string
-  add: string
-  city: string
+  male: string
+  female: string
 
   MyProfile: MyProfileModel = new  MyProfileModel();
   SelectedProfile: MyProfileModel = new MyProfileModel();
+  GenderProfile: GenderModel = new GenderModel();
+  gender: GenderModel [] = [
+    {gender_id: 1, gender: 'Male'},
+    {gender_id: 2, gender: 'Female'}
+  ];
   Profiles: MyProfileModel [] = []
   closeResult: string;
 
