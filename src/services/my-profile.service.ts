@@ -28,8 +28,8 @@ export class MyProfileService {
     return await this.http.HttpGet('my-profile/delete-my-profile/', id);
   }
 
-  public async UpdateMyProfile(data: string) {
-    return await this.http.HttpGet('my-profile/update-my-profile/', data)
+  public async UpdateMyProfile(data: any) {
+    return await this.http.HttpPost('my-profile/update-my-profile/', '', data)
   }
 }
 
