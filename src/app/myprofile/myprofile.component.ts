@@ -16,6 +16,7 @@ export class MyprofileComponent implements OnInit {
   lName: string
   male: string
   female: string
+  
 
   MyProfile: MyProfileModel = new  MyProfileModel();
   SelectedProfile: MyProfileModel = new MyProfileModel();
@@ -27,9 +28,11 @@ export class MyprofileComponent implements OnInit {
   Profiles: MyProfileModel [] = []
   closeResult: string;
 
+
   constructor( 
     private MyProfileService: MyProfileService,
     private modalService: NgbModal
+    
     
   ) { }
 
